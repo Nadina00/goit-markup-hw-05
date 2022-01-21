@@ -22,11 +22,12 @@ background: var(--background-head);
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
-    border-bottom: 1px solid #ECECEC;
+    
     }
 .header{
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #ECECEC;
     }
 .header_nav{
 display: flex;
@@ -702,9 +703,9 @@ border-radius: 4px;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .project_position:hover .project_hover, 
-    .project_position:focus .project_hover,
-    .project_position:active .project_hover{
+    .project_link:hover .project_hover, 
+    .project_link:focus .project_hover,
+    .project_link:active .project_hover{
         opacity: 1;
         transform: translateY(0) translate(-50%, -50%);
     }
@@ -724,10 +725,10 @@ border-radius: 4px;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .project_position:hover::before, 
-    .project_position:focus::before,
-    .project_position:active::before{
+   
+    .project_link:hover ::before, 
+    .project_link:focus ::before,
+    .project_link:active ::before{
     opacity: 1;
     transform: translateY(0);
-    }
 
