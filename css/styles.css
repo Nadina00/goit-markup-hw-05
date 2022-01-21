@@ -731,4 +731,4 @@ border-radius: 4px;
     .project_link:active ::before{
     opacity: 1;
     transform: translateY(0);
-
+    }
