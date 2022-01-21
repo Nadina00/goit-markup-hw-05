@@ -22,12 +22,12 @@ background: var(--background-head);
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
+    border-bottom: 1px solid #ECECEC;
     }
 .header{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ECECEC;
-}
+    }
 .header_nav{
 display: flex;
 align-items: center;
@@ -414,7 +414,7 @@ margin-bottom: 0;
 }
 .client_link{
     fill: var(--social-color);
-    transition-property: color;
+    transition-property: color, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -454,7 +454,7 @@ width: 44px;
 height: 44px;
 fill: var(--social-color);
 
-transition-property: background-color, color, border-radius;
+transition-property: background-color, color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -633,6 +633,7 @@ border-radius: 4px;
         margin-bottom: 0;
     }
     .project_link{
+    display: block;
     text-decoration: none;
     box-sizing: border-box;
     transition-property: box-shadow;
@@ -649,8 +650,7 @@ border-radius: 4px;
         display: block;
         max-width: 100%;
         height: auto;
-        overflow: hidden;
-                
+                        
     }
     .project_container {
     box-sizing: border-box;
@@ -676,6 +676,7 @@ border-radius: 4px;
     margin-bottom: 0px;
     }
     .project_position{
+    overflow: hidden;
     display: block;
     width: 370px;
     height: 294px;
@@ -696,17 +697,18 @@ border-radius: 4px;
     left: 50%;
     transform: translate(-50%, -50%) translateY(100%);
     opacity: 0;
-            
+    transition-property: opacity;       
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
     }
+
     .project_position:hover .project_hover, 
     .project_position:focus .project_hover,
     .project_position:active .project_hover{
         opacity: 1;
         transform: translateY(0) translate(-50%, -50%);
     }
+   
     .project_position::before{
         content: "";
         display: inline-block;
@@ -718,7 +720,7 @@ border-radius: 4px;
         left: 0;
         opacity: 0;
         transform: translateY(100%);
-        
+        transition-property: opacity;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -726,7 +728,6 @@ border-radius: 4px;
     .project_position:focus::before,
     .project_position:active::before{
     opacity: 1;
-    overflow: hidden;
     transform: translateY(0);
     }
 
