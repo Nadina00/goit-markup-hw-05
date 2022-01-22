@@ -682,6 +682,7 @@ border-radius: 4px;
     width: 370px;
     height: 294px;
     position: relative;
+    transition-property: opacity, transform;
     }
     .project_hover{
     display: block;
